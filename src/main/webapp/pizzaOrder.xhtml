@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Pizza Order</title>
+</h:head>
+<h:body>
+    <h3>Pizza Order</h3>
+    <h:form>
+        <h:panelGrid columns="3">
+            <h:panelGroup>
+                name:
+                <h:inputText value="#{pizzaOrder.name}"/>
+                Password:
+                <h:inputSecret redisplay="false" value="#{pizzaOrder.password}"/>
+                Size:
+                <h:selectOneMenu value="#{pizzaOrder.size}">
+                    <f:selectItem itemLabel="Family" itemValue="family"/>
+                    <f:selectItem itemLabel="Individual" itemValue="individual"/>
+                    <f:selectItem itemLabel="Duo" itemValue="duo"/>
+                </h:selectOneMenu>
+                Bottom:
+                <h:selectOneRadio value="#{pizzaOrder.bottom}">
+                    <f:selectItem itemLabel="crusty" itemValue="Crusty"/>
+                    <f:selectItem itemLabel="traditional" itemValue="Traditional"/>
+                </h:selectOneRadio><br/>
+                Spicy:
+                <h:selectBooleanCheckbox value="#{pizzaOrder.spicy}"/>
+                Number:
+                <h:inputText value="#{pizzaOrder.number}"/>
+            </h:panelGroup>
+            <h:panelGroup>
+                Ingredients:
+                <h:selectManyListbox value="#{pizzaIngredients.ingredients}">
+                    <f:selectItems value="#{pizzaIngredients.ingredientItems}"/>
+<!--                    <f:selectItem itemLabel="bacon" itemValue="Bacon"/>-->
+<!--                    <f:selectItem itemLabel="cheese" itemValue="Cheese"/>-->
+<!--                    <f:selectItem itemLabel="egg" itemValue="Egg"/>-->
+<!--                    <f:selectItem itemLabel="mushrooms" itemValue="Mushrooms"/>-->
+<!--                    <f:selectItem itemLabel="oregano" itemValue="Oregano"/>-->
+<!--                    <f:selectItem itemLabel="pepper" itemValue="Pepper"/>-->
+<!--                    <f:selectItem itemLabel="salami" itemValue="Salami"/>-->
+<!--                    <f:selectItem itemLabel="tomatoes" itemValue="Tomatoes"/>-->
+                </h:selectManyListbox>
+            </h:panelGroup>
+            <h:panelGroup>
+                <h:graphicImage value="resources/images/pizza.jpg"/>
+            </h:panelGroup>
+        </h:panelGrid>
+        <h:commandLink action="confirm.xhtml">
+            Order now
+        </h:commandLink>
+    </h:form>
+</h:body>
+</html>

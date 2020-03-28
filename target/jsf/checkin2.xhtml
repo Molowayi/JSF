@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Checkin bean validation</title>
+</h:head>
+
+<h:body>
+
+    <h:form>
+        <h:inputTextarea label="First name"
+                     value="#{checkin.toto}" />
+        <br/>
+        Enter your first name: <h:inputText id="firstName" label="First name"
+                                            value="#{checkin.passenger.firstName}"
+                                            required="false"
+                                            requiredMessage="Please enter first name"/>
+        <h:message for="firstName" />
+        <br/>
+        Enter your last name: <h:inputText id="lastName" label="Last name"
+                                           value="#{checkin.passenger.lastName}"
+                                           required="true"
+                                           requiredMessage="Please enter last name"/>
+        <h:message for="lastName" />
+        <br/>
+        Enter your national number: <h:inputText id="number" label="National number : "
+                                                 value="#{checkin.passenger.nationalNumber}"
+                                                 required="true"
+                                                 requiredMessage="Please enter national number"/>
+        <h:message for="number" />
+        <br/>
+        Age: <h:inputText id="age" label="Age"
+                          value="#{checkin.passenger.age}"
+                          required="true"
+                          requiredMessage="Please enter age"/>
+        <h:message for="age" />
+        <br/>
+        Luggage weight : <h:inputText id="weight" label="Luggage weight"
+                                      value="#{checkin.passenger.luggageWeight}"
+                                      required="true"
+                                      requiredMessage="Please enter luggage weight"/>
+        <h:message for="weight" />
+        <br/>
+        Departure Date : <h:inputText label="Departure Date "
+                                      id="date"
+                                      value="#{checkin.passenger.departureDate}"
+                                      required="true"
+                                      requiredMessage="Please enter departure Date">
+        <f:convertDateTime type="both" pattern="dd/MM/yyyy HH:mm"/>
+    </h:inputText>
+        <h:message for="date" />
+        <br/>
+
+        <br/>
+        <h:commandButton value="Register" action="#{checkin.toString}"/>
+    </h:form>
+</h:body>
+</html>

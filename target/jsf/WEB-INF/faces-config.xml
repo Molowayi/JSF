@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>be.molowayi.jsf.messages</base-name>
+            <var>msg</var>
+        </resource-bundle>
+        <locale-config>
+            <default-locale>en</default-locale>
+            <supported-locale>nl</supported-locale>
+            <supported-locale>fr</supported-locale>
+            <supported-locale>de</supported-locale>
+        </locale-config>
+    </application>
+    <navigation-rule>
+        <from-view-id>/checkin.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>checkin_national</from-outcome>
+            <to-view-id>/checkin_national.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>checkin_eu</from-outcome>
+            <to-view-id>/checkin_eu.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>checkin_non_eu</from-outcome>
+            <to-view-id>/checkin_non_eu.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/post.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>normalized</from-outcome>
+            <to-view-id>/normalized.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>not_normalized</from-outcome>
+            <to-view-id>/not_normalized.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>package</from-outcome>
+            <to-view-id>/package.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

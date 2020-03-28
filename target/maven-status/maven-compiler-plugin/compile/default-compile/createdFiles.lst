@@ -1,0 +1,16 @@
+be\molowayi\jsf\LanguageInternationalisation.class
+be\molowayi\jsf\NumberPlateValidator.class
+be\molowayi\jsf\RegistrationBean.class
+be\molowayi\jsf\Vehicule.class
+be\molowayi\jsf\PostBean.class
+be\molowayi\jsf\validation\Passenger.class
+be\molowayi\jsf\Item.class
+be\molowayi\jsf\NumberPlateConverter.class
+be\molowayi\jsf\Calculator.class
+be\molowayi\jsf\Passenger.class
+be\molowayi\jsf\RegistrationService.class
+be\molowayi\jsf\validation\Checkin.class
+be\molowayi\jsf\PizzaOrder.class
+be\molowayi\jsf\NumberPlate.class
+be\molowayi\jsf\ChoppingCart.class
+be\molowayi\jsf\PizzaIngredients.class
